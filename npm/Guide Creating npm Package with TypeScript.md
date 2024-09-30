@@ -35,13 +35,15 @@ Edit the `tsconfig.json` file to include these recommended settings:
 
 ```json
 {
-  "compilerOptions": {
-    "target": "es2018",
-    "module": "commonjs",
-    "declaration": true,
-    "outDir": "./lib",
-    "strict": true,
-    "esModuleInterop": true
+    "compilerOptions": {
+    "target": "es2020",           // Target modern JS features
+    "module": "commonjs",          // CommonJS is widely compatible
+    "declaration": true,           // Generate .d.ts files for type definitions
+    "outDir": "./lib",             // Output directory for compiled files
+    "strict": true,                // Enable all strict type-checking options
+    "esModuleInterop": true,       // Enable interoperability with CommonJS
+    "skipLibCheck": true,          // Avoid checking declaration files for speed
+    "forceConsistentCasingInFileNames": true // Ensure file names use consistent casing
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
