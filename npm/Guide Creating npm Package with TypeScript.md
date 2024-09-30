@@ -146,13 +146,14 @@ Create an `.eslintrc.js` file:
 
 ```javascript
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser', //This tells ESLint to use the TypeScript parser provided by @typescript-eslint/parser to understand TypeScript syntax.
   extends: [
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended', //This extends the recommended rules from the @typescript-eslint plugin, 
+                                            //which includes a set of rules specifically designed for TypeScript.
   ],
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
+  parserOptions: {          
+    ecmaVersion: 2018, //ecmaVersion: 2018 allows parsing of modern ECMAScript features.
+    sourceType: 'module', //sourceType: 'module' allows the use of ES6 modules.
   },
   rules: {
     // Custom rules here
